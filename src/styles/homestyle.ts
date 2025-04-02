@@ -61,7 +61,6 @@ export const StyledHome = styled.div`
   .mobile-left-sider {
     display: none;
   }
-
   @media (max-width: 768px) {
     .left_sider {
       display: none;

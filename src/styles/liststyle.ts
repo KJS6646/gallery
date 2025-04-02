@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledList = styled.div`
+  /* 로딩 스피너 스타일 */
   .ant-spin {
     display: flex;
     justify-content: center;
@@ -8,51 +9,66 @@ export const StyledList = styled.div`
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9999;
   }
-  .contentStyle {
-    margin: 0;
-    height: 500px;
-    width: 500px;
-    color: #fff;
-    line-height: 500px;
-    text-align: center;
-    background-color: #364d79;
-  }
+
+  /* 검색 필터 스타일 */
   .search__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    gap: 10px;
+    margin: 20px 0;
   }
+  .carousel-img {
+    background-color: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 리스트 아이템 스타일 */
   .infinite__div {
-    margin-bottom: 30%;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    height: 500px;
-    h2 {
-      margin-bottom: 10px;
-      font-size: 15px;
-      color: #333;
-    }
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
+
   .infinite-scroll-component__outerdiv {
-    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+  /* 반응형 스타일 */
   @media (max-width: 768px) {
-    .infinite__div {
-      padding: 0;
-      margin-bottom: 50px;
-      height: 40vh;
+    .search__top {
+      flex-direction: column;
+      gap: 8px;
     }
+
+    .infinite__div {
+      min-height: 300px;
+      margin-bottom: 20px;
+      padding: 16px;
+    }
+
     .contentStyle {
-      width: 100%;
-      height: 30vh;
+      height: 320px;
+      width: 320px;
+      max-width: 100%;
+      border-radius: 6px;
     }
   }
 `;
