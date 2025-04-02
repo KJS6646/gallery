@@ -55,6 +55,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "https://211.231.136.205:8443",
   "homepage": "https://kjs6646.github.io/gallery"
 }
