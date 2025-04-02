@@ -6,7 +6,7 @@ import { store } from "../redux/store";
 import { logout } from "../redux/slices/userSlice"; // 로그아웃 액션 import
 import { Alert } from "antd";
 
-const BASE_URL = "http://211.231.136.205:8080";
+const BASE_URL = "https://211.231.136.205:8443";
 
 // Axios 인스턴스 생성
 const apiClient = axios.create({

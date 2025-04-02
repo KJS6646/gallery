@@ -42,7 +42,7 @@ export const HomeLayout: React.FC = () => {
 
   // 로그아웃 API 호출
   const handleLogoutRequest = () => {
-    fetch("http://localhost:8080/account/logout", {
+    fetch("https://localhost:8443/account/logout", {
       method: "POST",
       credentials: "include",
     })
