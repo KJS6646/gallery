@@ -14,7 +14,7 @@ import List from "pages/List";
 const queryClient = new QueryClient();
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ConfigProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
           <Routes>
