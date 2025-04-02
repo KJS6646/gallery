@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import "./App.css";
 import PrivateRoute from "PrivateRoute";
 import { ConfigProvider } from "antd";
@@ -14,7 +14,7 @@ import List from "pages/List";
 const queryClient = new QueryClient();
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <ConfigProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
           <Routes>
@@ -32,7 +32,7 @@ function App() {
           </Routes>
         </QueryClientProvider>
       </ConfigProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
